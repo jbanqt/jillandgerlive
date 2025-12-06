@@ -354,6 +354,11 @@ html {
     font-size: calc(226px + (276 - 226) * (100vw - 1367px) / (1500 - 1367));
   }
 }
+@media screen and (min-height: 750px) and (max-height: 1080px) {
+  .rsvp__main-ct-title {
+    font-size: calc(20.6px + (27.6 - 20.6) * (100vw - 750px) / (1080 - 750));
+  }
+}
 .rsvp__main-ct-title > span {
   display: block;
 }
