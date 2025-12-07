@@ -416,8 +416,8 @@ html {
 @media screen and (max-width: 767px) {
   .rsvp__main-ct-link {
     width: 179px;
-    padding: 9px 10px 13px;
-    font-size: 30px;
+    padding: 7px 10px 11px;
+    font-size: 25px;
     margin-top: 26px;
   }
 }
