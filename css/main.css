@@ -308,6 +308,11 @@ html {
   text-transform: uppercase;
   text-align: center;
 }
+@media screen and (min-width: 1367px) and (max-width: 1920px) {
+  .rsvp__main-heading {
+    font-size: calc(33px + (47 - 33) * (100vw - 1367px) / (1920 - 1367));
+  }
+}
 .rsvp__main-ct {
   width: 40%;
 }
@@ -382,7 +387,7 @@ html {
 }
 .rsvp__main-ct-link {
   display: block;
-  width: 297px;
+  width: 157px;
   margin: 46px auto 0;
   padding: 10px 10px 16px;
   border-radius: 78px;
