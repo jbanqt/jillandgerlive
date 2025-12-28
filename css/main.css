@@ -52,6 +52,10 @@ html {
   -webkit-transform: translateY(0);
           transform: translateY(0);
 }
+.scrollSection.active .bubble {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
 
 .image {
   width: 100%;
@@ -119,7 +123,6 @@ html {
   }
 }
 .header__main {
-  max-width: 712px;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -193,22 +196,6 @@ html {
     right: -34px;
   }
 }
-@media screen and (max-width: 1024px) {
-  .header__rsvp {
-    display: none;
-  }
-}
-.header__rsvp-btn {
-  font-size: 2.4rem;
-  font-weight: 500;
-  font-family: "Vibur", cursive;
-  letter-spacing: -0.02em;
-  color: #fff;
-  text-transform: uppercase;
-  background-color: #000;
-  border-radius: 40px;
-  padding: 4px 12px 0;
-}
 
 .footer {
   margin-top: 50px;
@@ -232,11 +219,11 @@ html {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-top: 50px;
+  padding-top: 100px;
 }
 @media screen and (max-width: 1024px) {
   .footer__main {
-    padding: 75px 0 123px;
+    padding: 125px 0 123px;
     height: calc(100vh - 50px);
     height: calc(100svh - 50px);
   }
@@ -247,7 +234,7 @@ html {
   height: 50px;
   background: url("/public/images/common/footer-border.png") center/cover repeat-x;
   position: absolute;
-  top: 0;
+  top: 50px;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -255,7 +242,7 @@ html {
 @media screen and (max-width: 1024px) {
   .footer__main::before {
     height: 30px;
-    top: 10px;
+    top: 70px;
   }
 }
 .footer__main-desc {
@@ -405,6 +392,7 @@ html {
   color: #3c0f30;
   padding-top: 10px;
   overflow: hidden;
+  z-index: 4;
 }
 @media screen and (min-width: 1025px) and (max-width: 1920px) {
   .title {
@@ -414,13 +402,11 @@ html {
 @media screen and (max-width: 1024px) {
   .title {
     font-size: 9rem;
-    line-height: 1;
     text-align: center;
   }
 }
 .title__text {
   display: block;
-  line-height: 1;
 }
 .title__text.js-title {
   -webkit-transform: translateY(105%);
@@ -469,11 +455,16 @@ html {
 .top-hero__content {
   width: 50%;
   height: 100%;
+  margin-left: -5%;
 }
 @media screen and (max-width: 1024px) {
   .top-hero__content {
     width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
     max-height: 80vh;
+    margin: 0;
   }
 }
 .top-hero__content-video {
@@ -517,8 +508,14 @@ html {
   position: absolute;
   left: -190px;
   bottom: -80px;
-  z-index: 1;
+  z-index: 3;
   text-wrap: nowrap;
+}
+@media screen and (max-width: 1366px) {
+  .top-ceremony__head {
+    left: -140px;
+    bottom: -11%;
+  }
 }
 @media screen and (max-width: 1024px) {
   .top-ceremony__head {
@@ -534,22 +531,30 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  z-index: 1;
+}
+@media screen and (max-width: 1024px) {
+  .top-ceremony__ct {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 .top-ceremony__ct-ctr {
-  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  z-index: 1;
 }
 .top-ceremony__ct-ctr-main {
   display: -webkit-box;
@@ -558,7 +563,15 @@ html {
 }
 @media screen and (max-width: 1366px) {
   .top-ceremony__ct-ctr-main {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .top-ceremony__ct-ctr-main {
     position: relative;
+    max-width: 332px;
     width: 100%;
     margin: 0 auto;
     -webkit-box-orient: vertical;
@@ -573,52 +586,58 @@ html {
             justify-content: center;
   }
 }
-@media screen and (max-width: 1024px) {
-  .top-ceremony__ct-ctr-main {
-    max-width: 332px;
-  }
-}
 .top-ceremony__map {
   height: 615px;
   position: absolute;
-  right: 28.88%;
+  right: 372px;
   bottom: -12vh;
+  z-index: -1;
 }
 @media screen and (min-width: 1366px) and (max-width: 1920px) and (min-height: 600px) and (max-height: 1079px) {
   .top-ceremony__map {
     width: calc(280px + (533 - 280) * (100vh - 600px) / (1079 - 600));
-    right: 33%;
-  }
-}
-@media screen and (min-width: 1366px) and (max-width: 1920px) {
-  .top-ceremony__map {
-    height: calc(515px + (615 - 515) * (100vw - 1366px) / (1920 - 1366));
+    right: calc(465px + (372 - 465) * (100vh - 600px) / (1080 - 600));
+    left: 280px;
   }
 }
 @media screen and (max-width: 1366px) {
   .top-ceremony__map {
-    width: 230px;
-    height: 316px;
-    right: -31px;
+    width: 280px;
+    right: 465px;
+    left: 280px;
   }
 }
 @media screen and (max-width: 1024px) {
   .top-ceremony__map {
     bottom: -21px;
+    width: 230px;
+    height: 45vh;
+    right: -31px;
+    left: unset;
   }
 }
 .top-ceremony__church {
   width: 64%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   margin: 48px 0 0 -16.87%;
 }
 @media screen and (min-width: 1366px) and (max-width: 1920px) and (min-height: 600px) and (max-height: 1079px) {
   .top-ceremony__church {
-    width: 72%;
+    width: 67%;
     height: calc(250px + (333 - 250) * (100vh - 600px) / (1079 - 600));
-    margin: calc(28px + (48 - 28) * (100vh - 600px) / (1079 - 600)) 0 0 calc(-125px + (-225 - -125) * (100vh - 600px) / (1079 - 600));
+    margin: 0 0 0 calc(-125px + (-225 - -125) * (100vh - 600px) / (1079 - 600));
   }
 }
 @media screen and (max-width: 1366px) {
+  .top-ceremony__church {
+    width: 67%;
+    height: 250px;
+    margin: 0 0 0 -125px;
+  }
+}
+@media screen and (max-width: 1024px) {
   .top-ceremony__church {
     width: -webkit-fit-content;
     width: -moz-fit-content;
@@ -632,27 +651,23 @@ html {
   display: -ms-flexbox;
   display: flex;
   margin-left: -137px;
-  padding-bottom: 70px;
-}
-@media screen and (min-width: 1366px) and (max-width: 1920px) and (min-height: 600px) and (max-height: 1079px) {
-  .top-ceremony__church-chat {
-    padding-bottom: calc(10px + (70 - 10) * (100vh - 600px) / (1079 - 600));
-  }
+  padding-bottom: 40px;
 }
 @media screen and (max-width: 1366px) {
+  .top-ceremony__church-chat {
+    margin-left: -60px;
+  }
+}
+@media screen and (max-width: 1024px) {
   .top-ceremony__church-chat {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin: -8px 0 0;
-    padding: 0;
-  }
-}
-@media screen and (max-width: 1024px) {
-  .top-ceremony__church-chat {
     -ms-flex-item-align: start;
         align-self: flex-start;
+    margin: -8px 0 0;
+    padding: 0;
   }
 }
 .top-ceremony__church-chat-dog {
@@ -671,6 +686,12 @@ html {
   }
 }
 @media screen and (max-width: 1366px) {
+  .top-ceremony__church-chat-dog {
+    width: 183px;
+    margin: 10px 0 0 -10px;
+  }
+}
+@media screen and (max-width: 1024px) {
   .top-ceremony__church-chat-dog {
     -webkit-transform: scaleX(-1);
             transform: scaleX(-1);
@@ -698,11 +719,20 @@ html {
 }
 @media screen and (max-width: 1366px) {
   .top-ceremony__church-chat-bubble {
-    width: 147px;
-    height: 73px;
+    width: 238px;
   }
 }
-@media screen and (max-width: 1366px) {
+@media screen and (max-width: 1024px) {
+  .top-ceremony__church-chat-bubble {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: 100px;
+    -webkit-transform-origin: left center !important;
+            transform-origin: left center !important;
+  }
+}
+@media screen and (max-width: 1024px) {
   .top-ceremony__church-chat-bubble img {
     -webkit-transform: scaleX(-1);
             transform: scaleX(-1);
@@ -721,23 +751,21 @@ html {
   -webkit-transform: translate(-52%, -51%);
           transform: translate(-52%, -51%);
 }
-@media screen and (max-width: 1366px) {
+@media screen and (max-width: 1024px) {
   .top-ceremony__church-chat-bubble-text {
-    font-size: 10px;
+    font-size: 15px;
     -webkit-transform: translate(-48%, -46%);
             transform: translate(-48%, -46%);
   }
 }
 .top-ceremony__info {
-  padding: 40px 0;
+  padding-top: 35px;
   width: 40%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
-@media screen and (min-width: 1366px) and (max-width: 1920px) and (min-height: 600px) and (max-height: 1079px) {
-  .top-ceremony__info {
-    padding: calc(60px + (40 - 60) * (100vh - 600px) / (1079 - 600)) 0;
-  }
-}
-@media screen and (max-width: 1366px) {
+@media screen and (max-width: 1024px) {
   .top-ceremony__info {
     width: 100%;
     padding: 0;
@@ -750,32 +778,23 @@ html {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  font-size: 3rem;
+  font-size: min(3rem, 30px + (30 - 30) * (100vw - 1366px) / (1920 - 1366), 20px + (30 - 20) * (100vh - 600px) / (1080 - 600));
   font-family: "Vibur", cursive;
   font-weight: 500;
   letter-spacing: -0.02em;
   line-height: 1;
   padding: 5px 25px;
-}
-@media screen and (min-width: 1366px) and (max-width: 1920px) and (min-height: 600px) and (max-height: 1079px) {
-  .top-ceremony__info-time {
-    font-size: calc(20px + (30 - 20) * (100vh - 600px) / (1080 - 600));
-  }
-}
-@media screen and (min-width: 1025px) and (max-width: 1366px) {
-  .top-ceremony__info-time {
-    font-size: 2rem;
-  }
+  margin-left: -8px;
 }
 @media screen and (max-width: 1366px) {
   .top-ceremony__info-time {
-    font-size: 16px;
-    margin: 0 auto;
+    font-size: 2rem;
   }
 }
 @media screen and (max-width: 1024px) {
   .top-ceremony__info-time {
     font-size: 15px;
+    margin: 0 auto;
   }
 }
 .top-ceremony__info-time::before {
@@ -790,26 +809,20 @@ html {
           transform: translate(-50%, -58%);
 }
 .top-ceremony__info-loc {
-  font-size: 4rem;
+  font-size: min(4rem, 30px + (40 - 30) * (100vw - 1366px) / (1920 - 1366), 24px + (40 - 24) * (100vh - 600px) / (1080 - 600));
   font-family: "Youtube";
   letter-spacing: -0.03em;
-  margin-top: 10px;
+  margin: 13px 0;
 }
 @media screen and (min-width: 1366px) and (max-width: 1920px) and (min-height: 600px) and (max-height: 1079px) {
   .top-ceremony__info-loc {
-    font-size: calc(30px + (40 - 30) * (100vh - 600px) / (1080 - 600));
-    margin-top: calc(0px + (10 - 0) * (100vh - 600px) / (1080 - 600));
-  }
-}
-@media screen and (min-width: 1025px) and (max-width: 1366px) {
-  .top-ceremony__info-loc {
-    font-size: calc(28px + (40 - 28) * (100vw - 1025px) / (1366 - 1025));
+    margin: calc(5px + (13 - 5) * (100vh - 600px) / (1080 - 600)) 0;
   }
 }
 @media screen and (max-width: 1366px) {
   .top-ceremony__info-loc {
     font-size: 23px;
-    margin-top: 5px;
+    margin: 5px;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -828,11 +841,6 @@ html {
     font-size: calc(12px + (22 - 12) * (100vh - 600px) / (1080 - 600));
   }
 }
-@media screen and (min-width: 1025px) and (max-width: 1366px) {
-  .top-ceremony__info-subloc {
-    font-size: calc(16px + (22 - 16) * (100vw - 1025px) / (1366 - 1025));
-  }
-}
 @media screen and (max-width: 1366px) {
   .top-ceremony__info-subloc {
     font-size: 12px;
@@ -848,6 +856,11 @@ html {
   right: 98px;
   bottom: -69px;
 }
+@media screen and (min-width: 1366px) and (max-width: 1920px) and (min-height: 600px) and (max-height: 1079px) {
+  .top-ceremony__mall-chat {
+    bottom: calc(-39px + (-69 - -39) * (100vh - 600px) / (1080 - 600));
+  }
+}
 .top-ceremony__mall-chat-dog {
   width: 130px;
 }
@@ -856,15 +869,24 @@ html {
     width: calc(80px + (130 - 80) * (100vh - 600px) / (1080 - 600));
   }
 }
+@media screen and (max-width: 1366px) {
+  .top-ceremony__mall-chat-dog {
+    width: 80px;
+  }
+}
 .top-ceremony__mall-chat-bubble {
   position: relative;
   width: 219px;
-  -webkit-transform: translate(41px, -28px);
-          transform: translate(41px, -28px);
+  margin: -28px 0 0 34px;
 }
 @media screen and (min-width: 1366px) and (max-width: 1920px) and (min-height: 600px) and (max-height: 1079px) {
   .top-ceremony__mall-chat-bubble {
     width: calc(150px + (219 - 150) * (100vh - 600px) / (1080 - 600));
+  }
+}
+@media screen and (max-width: 1366px) {
+  .top-ceremony__mall-chat-bubble {
+    width: 150px;
   }
 }
 .top-ceremony__mall-chat-bubble-text {
@@ -879,6 +901,11 @@ html {
   left: 50%;
   -webkit-transform: translate(-44%, -51%);
           transform: translate(-44%, -51%);
+}
+@media screen and (max-width: 1366px) {
+  .top-ceremony__mall-chat-bubble-text {
+    font-size: 12px;
+  }
 }
 .top-ceremony__home-chat {
   position: relative;
@@ -896,10 +923,15 @@ html {
             transform: translateX(calc(-50px + (0 - -50) * (100vh - 600px) / (1080 - 600)));
   }
 }
+@media screen and (max-width: 1366px) {
+  .top-ceremony__home-chat {
+    margin-right: -50px;
+  }
+}
 .top-ceremony__home-chat::before {
   content: "";
-  width: 212px;
-  height: 162px;
+  width: 118px;
+  height: 105px;
   background: url("/public/images/top/ceremony-house.png") bottom right/contain no-repeat;
   position: absolute;
   bottom: 100%;
@@ -907,9 +939,14 @@ html {
 }
 @media screen and (min-width: 1366px) and (max-width: 1920px) and (min-height: 600px) and (max-height: 1079px) {
   .top-ceremony__home-chat::before {
-    width: calc(130px + (212 - 130) * (100vh - 600px) / (1080 - 600));
-    height: calc(92px + (162 - 92) * (100vh - 600px) / (1080 - 600));
+    width: calc(78px + (118 - 78) * (100vh - 600px) / (1080 - 600));
+    height: calc(55px + (105 - 55) * (100vh - 600px) / (1080 - 600));
     left: calc(62px + (117 - 62) * (100vh - 600px) / (1080 - 600));
+  }
+}
+@media screen and (max-width: 1366px) {
+  .top-ceremony__home-chat::before {
+    left: 62px;
   }
 }
 .top-ceremony__home-chat-dog {
@@ -920,15 +957,24 @@ html {
     width: calc(130px + (221 - 130) * (100vh - 600px) / (1080 - 600));
   }
 }
+@media screen and (max-width: 1366px) {
+  .top-ceremony__home-chat-dog {
+    width: 130px;
+  }
+}
 .top-ceremony__home-chat-bubble {
   position: relative;
   width: 242px;
-  -webkit-transform: translate(-29px, 20px);
-          transform: translate(-29px, 20px);
+  margin: 20px 0 0 -29px;
 }
 @media screen and (min-width: 1366px) and (max-width: 1920px) and (min-height: 600px) and (max-height: 1079px) {
   .top-ceremony__home-chat-bubble {
     width: calc(150px + (242 - 150) * (100vh - 600px) / (1080 - 600));
+  }
+}
+@media screen and (max-width: 1366px) {
+  .top-ceremony__home-chat-bubble {
+    width: 150px;
   }
 }
 .top-ceremony__home-chat-bubble-text {
@@ -943,6 +989,11 @@ html {
   left: 50%;
   -webkit-transform: translate(-47%, -58%);
           transform: translate(-47%, -58%);
+}
+@media screen and (max-width: 1366px) {
+  .top-ceremony__home-chat-bubble-text {
+    font-size: 12px;
+  }
 }
 .top-reception {
   width: 100%;
@@ -961,9 +1012,9 @@ html {
 .top-reception__head {
   position: absolute;
   bottom: 10px;
-  z-index: 1;
   right: -79px;
   text-wrap: nowrap;
+  z-index: 3;
 }
 @media screen and (max-width: 1024px) {
   .top-reception__head {
@@ -978,6 +1029,7 @@ html {
   position: relative;
   background-color: #deeff7;
   padding: 44px 49px;
+  z-index: 1;
 }
 @media screen and (min-width: 1366px) and (max-width: 1920px) and (min-height: 600px) and (max-height: 1079px) {
   .top-reception__ct {
@@ -985,7 +1037,7 @@ html {
     padding-bottom: calc(24px + (44 - 24) * (100vh - 600px) / (1080 - 600));
   }
 }
-@media screen and (max-width: 1366px) {
+@media screen and (max-width: 1024px) {
   .top-reception__ct {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -997,39 +1049,58 @@ html {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    padding: 65px 28px 30px;
+    padding: 65px 24px 30px;
   }
 }
-@media screen and (max-width: 1366px) {
+.top-reception__ct-ctr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  z-index: 1;
+}
+@media screen and (max-width: 1024px) {
   .top-reception__ct-ctr {
+    display: block;
     max-width: 332px;
+    width: 100%;
     margin: 0 auto;
   }
 }
 .top-reception__map {
+  height: 431px;
   position: absolute;
   top: -20vh;
-  right: 29%;
-  height: 431px;
+  right: 379px;
+  z-index: -1;
 }
 @media screen and (min-width: 1366px) and (max-width: 1920px) and (min-height: 600px) and (max-height: 1079px) {
   .top-reception__map {
-    width: calc(300px + (460 - 300) * (100vh - 600px) / (1080 - 600));
-    right: 32%;
+    width: calc(270px + (470 - 270) * (100vh - 600px) / (1079 - 600));
+    right: calc(565px + (379 - 565) * (100vh - 600px) / (1080 - 600));
+    left: 307px;
   }
 }
 @media screen and (max-width: 1366px) {
   .top-reception__map {
-    height: 41vh;
-    right: -30px;
+    width: 270px;
+    right: 565px;
+    left: 307px;
   }
 }
 @media screen and (max-width: 1024px) {
   .top-reception__map {
+    width: 226px;
     top: -27.29vh;
+    height: 41vh;
+    right: -30px;
+    left: unset;
   }
 }
-@media screen and (max-width: 1366px) {
+@media screen and (max-width: 1024px) {
   .top-reception__info {
     text-align: center;
   }
@@ -1040,19 +1111,20 @@ html {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  font-size: 3rem;
+  font-size: min(3rem, 30px + (30 - 30) * (100vw - 1366px) / (1920 - 1366), 20px + (30 - 20) * (100vh - 600px) / (1080 - 600));
   font-family: "Vibur", cursive;
   font-weight: 500;
   letter-spacing: -0.02em;
   line-height: 1;
   padding: 5px 25px;
-}
-@media screen and (min-width: 1366px) and (max-width: 1920px) and (min-height: 600px) and (max-height: 1079px) {
-  .top-reception__info-time {
-    font-size: calc(20px + (30 - 20) * (100vh - 600px) / (1080 - 600));
-  }
+  margin-left: -8px;
 }
 @media screen and (max-width: 1366px) {
+  .top-reception__info-time {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 1024px) {
   .top-reception__info-time {
     font-size: 15px;
     margin: 0 auto;
@@ -1070,21 +1142,25 @@ html {
           transform: translate(-50%, -58%);
 }
 .top-reception__info-loc {
-  font-size: 4rem;
+  font-size: min(4rem, 30px + (40 - 30) * (100vw - 1366px) / (1920 - 1366), 24px + (40 - 24) * (100vh - 600px) / (1080 - 600));
   font-family: "Youtube";
   letter-spacing: -0.03em;
   margin: 13px 0;
 }
 @media screen and (min-width: 1366px) and (max-width: 1920px) and (min-height: 600px) and (max-height: 1079px) {
   .top-reception__info-loc {
-    font-size: calc(30px + (40 - 30) * (100vh - 600px) / (1080 - 600));
-    margin-top: calc(5px + (13 - 5) * (100vh - 600px) / (1080 - 600));
+    margin: calc(5px + (13 - 5) * (100vh - 600px) / (1080 - 600)) 0;
   }
 }
 @media screen and (max-width: 1366px) {
   .top-reception__info-loc {
-    font-size: 22px;
+    font-size: 23px;
     margin: 5px 0;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .top-reception__info-loc {
+    font-size: 22px;
   }
 }
 .top-reception__info-subloc {
@@ -1103,21 +1179,36 @@ html {
     font-size: 12px;
   }
 }
+@media screen and (max-width: 1024px) {
+  .top-reception__info-subloc {
+    font-size: 12px;
+  }
+}
 .top-reception__img {
   width: 68.22%;
-  position: absolute;
-  bottom: 8.56%;
-  left: 14.77%;
+  margin-top: -72px;
 }
 @media screen and (min-width: 1366px) and (max-width: 1920px) and (min-height: 600px) and (max-height: 1079px) {
   .top-reception__img {
-    height: calc(280px + (550 - 280) * (100vh - 600px) / (1079 - 600));
+    margin-top: calc(-32px + (-72 - -32) * (100vh - 600px) / (1079 - 600));
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: calc(290px + (557 - 290) * (100vh - 600px) / (1079 - 600));
   }
 }
 @media screen and (max-width: 1366px) {
   .top-reception__img {
-    position: unset;
-    width: 100%;
+    margin-top: -32px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: 290px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .top-reception__img {
+    height: 198px;
     margin-top: -28px;
   }
 }
@@ -1147,21 +1238,24 @@ html {
   right: -92px;
   top: min(138px, 105px + (138 - 105) * (100vw - 1025px) / (1700 - 1025), 70px + (138 - 70) * (100vh - 600px) / (1080 - 600));
 }
-@media screen and (max-width: 1366px) {
+@media screen and (max-width: 1024px) {
   .top-reception__chat {
     position: unset;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: reverse;
         -ms-flex-direction: row-reverse;
             flex-direction: row-reverse;
+    -webkit-transform: translateX(9px);
+            transform: translateX(9px);
   }
 }
 .top-reception__chat-dog {
   width: min(268px, 150px + (268 - 150) * (100vw - 1367px) / (1700 - 1367), 150px + (268 - 150) * (100vh - 600px) / (1080 - 600));
 }
-@media screen and (max-width: 1366px) {
+@media screen and (max-width: 1024px) {
   .top-reception__chat-dog {
     width: 117px;
+    margin-left: -20px;
   }
 }
 .top-reception__chat-bubble {
@@ -1176,6 +1270,12 @@ html {
   .top-reception__chat-bubble {
     width: 200px;
     margin: -39px 0 0;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .top-reception__chat-bubble {
+    -webkit-transform-origin: bottom right !important;
+            transform-origin: bottom right !important;
   }
 }
 .top-reception__chat-bubble-text {
@@ -1345,6 +1445,12 @@ html {
             flex-direction: column;
   }
 }
+@media screen and (min-width: 767px) and (max-width: 1024px) {
+  .top-tips__ct-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 .top-tips__ct-item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1355,6 +1461,20 @@ html {
   gap: 25px;
 }
 @media screen and (max-width: 1024px) {
+  .top-tips__ct-item {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    gap: 10px;
+  }
+}
+.top-tips__ct-item:first-child .top-tips__ct-image {
+  height: 83px;
+}
+.top-tips__ct-item:first-child .top-tips__ct-image img {
+  height: 100%;
+}
+@media screen and (max-width: 1024px) {
   .top-tips__ct-item:not(:last-child) {
     margin-bottom: 5px;
   }
@@ -1363,9 +1483,9 @@ html {
   width: 100%;
   max-width: min(120px, 100px + (120 - 100) * (100vw - 1025px) / (1366 - 1025), 70px + (120 - 70) * (100vh - 600px) / (1080 - 600));
 }
-@media screen and (max-width: 1024px) {
+@media screen and (min-width: 767px) and (max-width: 1024px) {
   .top-tips__ct-image {
-    max-width: 100px;
+    height: 100px;
   }
 }
 @media screen and (max-width: 767px) {
@@ -1398,14 +1518,14 @@ html {
   }
 }
 .top-tips__ct-desc {
-  font-size: min(2.2rem, 16px + (22 - 16) * (100vw - 1025px) / (1366 - 1025), 13px + (22 - 13) * (100vh - 600px) / (1080 - 600));
+  font-size: min(2.2rem, 16px + (22 - 16) * (100vw - 1366px) / (1920 - 1366), 13px + (22 - 13) * (100vh - 600px) / (1080 - 600));
   font-family: "Youtube";
   letter-spacing: -0.03em;
   line-height: 1em;
 }
 @media screen and (max-width: 1024px) {
   .top-tips__ct-desc {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 @media screen and (max-width: 767px) {
@@ -1747,6 +1867,7 @@ html {
   letter-spacing: -0.03em;
   line-height: 1.25em;
   text-align: center;
+  margin-top: 10px;
 }
 @media screen and (max-width: 1024px) {
   .top-gifts__desc {
@@ -2182,15 +2303,6 @@ html {
   }
 }
 
-.tablet-down-inline {
-  display: none;
-}
-@media screen and (max-width: 1366px) {
-  .tablet-down-inline {
-    display: inline;
-  }
-}
-
 .big-sp-up {
   display: block;
 }
@@ -2229,6 +2341,15 @@ html {
   }
 }
 
+.big-sp-down-inline {
+  display: none;
+}
+@media screen and (max-width: 1024px) {
+  .big-sp-down-inline {
+    display: inline;
+  }
+}
+
 .big-sp-down-flex {
   display: none;
 }
@@ -2263,4 +2384,37 @@ html {
 
 .text-nowrap {
   text-wrap: nowrap;
+}
+
+.bubble {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transform-origin: left bottom;
+          transform-origin: left bottom;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+}
+.bubble--left-center {
+  -webkit-transform-origin: left center;
+          transform-origin: left center;
+}
+.bubble--right {
+  -webkit-transform-origin: right bottom;
+          transform-origin: right bottom;
+}
+.bubble--right-center {
+  -webkit-transform-origin: right center;
+          transform-origin: right center;
+}
+.bubble--top-left {
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+}
+.bubble--bottom-right {
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
 }
