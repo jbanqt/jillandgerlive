@@ -443,6 +443,7 @@ html {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-left: 9%;
 }
 @media screen and (max-width: 1024px) {
   .top-hero__ctr {
@@ -450,6 +451,8 @@ html {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    margin: 0;
+    padding-top: 10vh;
   }
 }
 .top-hero__content {
@@ -459,7 +462,7 @@ html {
 }
 @media screen and (max-width: 1024px) {
   .top-hero__content {
-    width: 100%;
+    width: 90%;
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
@@ -1097,7 +1100,7 @@ html {
 }
 @media screen and (max-width: 1366px) {
   .top-reception__map {
-    width: 270px;
+    width: 260px;
     right: 565px;
     left: 349px;
   }
