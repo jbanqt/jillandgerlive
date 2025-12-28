@@ -603,23 +603,21 @@ html {
   .top-ceremony__map {
     width: calc(280px + (533 - 280) * (100vh - 600px) / (1079 - 600));
     right: calc(465px + (372 - 465) * (100vh - 600px) / (1080 - 600));
-    left: 235px;
+    left: 328px;
   }
 }
 @media screen and (max-width: 1366px) {
   .top-ceremony__map {
     width: 280px;
     right: 465px;
-    left: 235px;
+    left: 328px;
   }
 }
 @media screen and (max-width: 1024px) {
   .top-ceremony__map {
     bottom: -25px;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    height: 45vh;
+    width: auto;
+    height: 36vh;
     right: -31px;
     left: unset;
   }
@@ -635,7 +633,7 @@ html {
   .top-ceremony__church {
     width: 67%;
     height: calc(200px + (333 - 200) * (100vh - 600px) / (1079 - 600));
-    margin: 0 0 0 calc(-125px + (-225 - -125) * (100vh - 600px) / (1079 - 600));
+    margin: 0 0 0 calc(-55px + (-225 - -55) * (100vh - 600px) / (1079 - 600));
   }
 }
 @media screen and (max-width: 1366px) {
@@ -1094,19 +1092,19 @@ html {
   .top-reception__map {
     width: calc(270px + (470 - 270) * (100vh - 600px) / (1079 - 600));
     right: calc(565px + (379 - 565) * (100vh - 600px) / (1080 - 600));
-    left: 260px;
+    left: 349px;
   }
 }
 @media screen and (max-width: 1366px) {
   .top-reception__map {
     width: 270px;
     right: 565px;
-    left: 260px;
+    left: 349px;
   }
 }
 @media screen and (max-width: 1024px) {
   .top-reception__map {
-    width: 226px;
+    width: auto;
     top: -27.29vh;
     height: 41vh;
     right: -30px;
@@ -1203,11 +1201,11 @@ html {
 }
 @media screen and (min-width: 1366px) and (max-width: 1920px) and (min-height: 600px) and (max-height: 1079px) {
   .top-reception__img {
-    margin-top: calc(-22px + (-72 - -22) * (100vh - 600px) / (1079 - 600));
+    margin-top: calc(-32px + (-72 - -32) * (100vh - 600px) / (1079 - 600));
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
-    height: calc(210px + (557 - 210) * (100vh - 600px) / (1079 - 600));
+    height: calc(300px + (557 - 300) * (100vh - 600px) / (1079 - 600));
   }
 }
 @media screen and (max-width: 1366px) {
@@ -1216,7 +1214,7 @@ html {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
-    height: 290px;
+    height: 300px;
   }
 }
 @media screen and (max-width: 1024px) {
