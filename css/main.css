@@ -219,11 +219,11 @@ html {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-top: 100px;
+  padding-top: 120px;
 }
 @media screen and (max-width: 1024px) {
   .footer__main {
-    padding: 125px 0 123px;
+    padding: 135px 0 123px;
     height: calc(100vh - 50px);
     height: calc(100svh - 50px);
   }
@@ -234,7 +234,7 @@ html {
   height: 50px;
   background: url("/public/images/common/footer-border.png") center/cover repeat-x;
   position: absolute;
-  top: 50px;
+  top: 70px;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -242,7 +242,7 @@ html {
 @media screen and (max-width: 1024px) {
   .footer__main::before {
     height: 30px;
-    top: 70px;
+    top: 80px;
   }
 }
 .footer__main-desc {
@@ -511,6 +511,12 @@ html {
   z-index: 3;
   text-wrap: nowrap;
 }
+@media screen and (min-width: 1366px) and (max-width: 1920px) and (min-height: 600px) and (max-height: 1079px) {
+  .top-ceremony__head {
+    bottom: calc(-60px + (-80 - -60) * (100vh - 600px) / (1079 - 600));
+    left: calc(-160px + (-190 - -160) * (100vh - 600px) / (1080 - 600));
+  }
+}
 @media screen and (max-width: 1366px) {
   .top-ceremony__head {
     left: -140px;
@@ -597,20 +603,22 @@ html {
   .top-ceremony__map {
     width: calc(280px + (533 - 280) * (100vh - 600px) / (1079 - 600));
     right: calc(465px + (372 - 465) * (100vh - 600px) / (1080 - 600));
-    left: 280px;
+    left: 235px;
   }
 }
 @media screen and (max-width: 1366px) {
   .top-ceremony__map {
     width: 280px;
     right: 465px;
-    left: 280px;
+    left: 235px;
   }
 }
 @media screen and (max-width: 1024px) {
   .top-ceremony__map {
-    bottom: -21px;
-    width: 230px;
+    bottom: -25px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
     height: 45vh;
     right: -31px;
     left: unset;
@@ -626,7 +634,7 @@ html {
 @media screen and (min-width: 1366px) and (max-width: 1920px) and (min-height: 600px) and (max-height: 1079px) {
   .top-ceremony__church {
     width: 67%;
-    height: calc(250px + (333 - 250) * (100vh - 600px) / (1079 - 600));
+    height: calc(200px + (333 - 200) * (100vh - 600px) / (1079 - 600));
     margin: 0 0 0 calc(-125px + (-225 - -125) * (100vh - 600px) / (1079 - 600));
   }
 }
@@ -651,11 +659,12 @@ html {
   display: -ms-flexbox;
   display: flex;
   margin-left: -137px;
-  padding-bottom: 40px;
+  padding-bottom: 70px;
 }
 @media screen and (max-width: 1366px) {
   .top-ceremony__church-chat {
     margin-left: -60px;
+    padding-bottom: 40px;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -724,9 +733,7 @@ html {
 }
 @media screen and (max-width: 1024px) {
   .top-ceremony__church-chat-bubble {
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
+    width: auto;
     height: 100px;
     -webkit-transform-origin: left center !important;
             transform-origin: left center !important;
@@ -736,6 +743,7 @@ html {
   .top-ceremony__church-chat-bubble img {
     -webkit-transform: scaleX(-1);
             transform: scaleX(-1);
+    width: auto;
   }
 }
 .top-ceremony__church-chat-bubble-text {
@@ -858,7 +866,12 @@ html {
 }
 @media screen and (min-width: 1366px) and (max-width: 1920px) and (min-height: 600px) and (max-height: 1079px) {
   .top-ceremony__mall-chat {
-    bottom: calc(-39px + (-69 - -39) * (100vh - 600px) / (1080 - 600));
+    bottom: calc(-29px + (-69 - -29) * (100vh - 600px) / (1080 - 600));
+  }
+}
+@media screen and (max-width: 1366px) {
+  .top-ceremony__mall-chat {
+    bottom: -29px;
   }
 }
 .top-ceremony__mall-chat-dog {
@@ -1081,14 +1094,14 @@ html {
   .top-reception__map {
     width: calc(270px + (470 - 270) * (100vh - 600px) / (1079 - 600));
     right: calc(565px + (379 - 565) * (100vh - 600px) / (1080 - 600));
-    left: 307px;
+    left: 260px;
   }
 }
 @media screen and (max-width: 1366px) {
   .top-reception__map {
     width: 270px;
     right: 565px;
-    left: 307px;
+    left: 260px;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -1190,11 +1203,11 @@ html {
 }
 @media screen and (min-width: 1366px) and (max-width: 1920px) and (min-height: 600px) and (max-height: 1079px) {
   .top-reception__img {
-    margin-top: calc(-32px + (-72 - -32) * (100vh - 600px) / (1079 - 600));
+    margin-top: calc(-22px + (-72 - -22) * (100vh - 600px) / (1079 - 600));
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
-    height: calc(290px + (557 - 290) * (100vh - 600px) / (1079 - 600));
+    height: calc(210px + (557 - 210) * (100vh - 600px) / (1079 - 600));
   }
 }
 @media screen and (max-width: 1366px) {
@@ -1294,6 +1307,10 @@ html {
 @media screen and (max-width: 1366px) {
   .top-reception__chat-bubble-text {
     font-size: 15px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .top-reception__chat-bubble-text {
     -webkit-transform: translate(-51%, -56%);
             transform: translate(-51%, -56%);
   }
@@ -1572,7 +1589,7 @@ html {
 }
 @media screen and (min-width: 1366px) and (max-width: 1920px) and (min-height: 600px) and (max-height: 1079px) {
   .top-dcode__head {
-    top: calc(-10px + (26 - -10) * (100vh - 600px) / (1079 - 600));
+    top: calc(-45px + (26 - -45) * (100vh - 600px) / (1079 - 600));
   }
 }
 @media screen and (max-width: 1024px) {
@@ -2391,12 +2408,12 @@ html {
           transform: scale(0);
   -webkit-transform-origin: left bottom;
           transform-origin: left bottom;
-  -webkit-transition: -webkit-transform 0.3s ease;
-  transition: -webkit-transform 0.3s ease;
-  transition: transform 0.3s ease;
-  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
-  -webkit-transition-delay: 0.3s;
-          transition-delay: 0.3s;
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+  -webkit-transition-delay: 0.6s;
+          transition-delay: 0.6s;
 }
 .bubble--left-center {
   -webkit-transform-origin: left center;
