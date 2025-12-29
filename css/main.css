@@ -258,6 +258,11 @@ html {
 .footer__main-marquee img {
   width: 2131.11px;
 }
+@media screen and (max-width: 1024px) {
+  .footer__main-marquee img {
+    width: 1188.96px;
+  }
+}
 .footer__main-desc {
   font-size: 4rem;
   letter-spacing: -0.02em;
