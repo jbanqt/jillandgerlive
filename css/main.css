@@ -655,7 +655,7 @@ html {
 }
 @media screen and (max-width: 1024px) {
   .top-ceremony__map {
-    bottom: -42vh;
+    bottom: -40vh;
     width: auto;
     height: 75vh;
     right: -22px;
