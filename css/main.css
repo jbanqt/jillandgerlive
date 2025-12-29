@@ -501,12 +501,16 @@ html {
 }
 @media screen and (max-width: 1024px) {
   .top-hero__content {
-    width: 90%;
+    width: 100%;
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
     max-height: 80vh;
-    margin: 0;
+    margin: -2% 0 0;
+    position: relative;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
   }
 }
 .top-hero__content-video {
@@ -529,7 +533,7 @@ html {
 }
 @media screen and (max-width: 1024px) {
   .top-hero__heading {
-    font-size: 80px;
+    font-size: 94px;
   }
 }
 .top-ceremony {
@@ -593,6 +597,7 @@ html {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    padding: 10px 0;
   }
 }
 .top-ceremony__ct-ctr {
@@ -650,7 +655,7 @@ html {
 }
 @media screen and (max-width: 1024px) {
   .top-ceremony__map {
-    bottom: -41vh;
+    bottom: -42vh;
     width: auto;
     height: 77vh;
     right: -22px;
@@ -679,14 +684,14 @@ html {
 }
 @media screen and (max-width: 1024px) {
   .top-ceremony__church {
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    height: 170px;
+    width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
     margin: 0;
   }
 }
-@media screen and (min-width: 0) and (max-width: 1024px) and (min-height: 0) and (max-height: 800px) {
+@media screen and (min-width: 0) and (max-width: 1024px) and (min-height: 0) and (max-height: 700px) {
   .top-ceremony__church {
     height: 140px;
   }
