@@ -105,7 +105,7 @@ html {
 }
 @media screen and (max-width: 1024px) {
   .header {
-    background-color: rgba(255, 249, 236, 0.5);
+    background-color: #fff9ec;
   }
 }
 .header__wrapper {
