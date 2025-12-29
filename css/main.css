@@ -501,7 +501,7 @@ html {
 }
 @media screen and (max-width: 1024px) {
   .top-hero__content {
-    width: 100%;
+    width: 105%;
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
@@ -509,8 +509,8 @@ html {
     margin: -2% 0 0;
     position: relative;
     left: 50%;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
+    -webkit-transform: translateX(-47%);
+            transform: translateX(-47%);
   }
 }
 .top-hero__content-video {
@@ -533,7 +533,7 @@ html {
 }
 @media screen and (max-width: 1024px) {
   .top-hero__heading {
-    font-size: 94px;
+    font-size: 98px;
   }
 }
 .top-ceremony {
@@ -657,7 +657,7 @@ html {
   .top-ceremony__map {
     bottom: -42vh;
     width: auto;
-    height: 77vh;
+    height: 75vh;
     right: -22px;
     left: unset;
   }
@@ -847,7 +847,7 @@ html {
     margin: 0 auto;
   }
 }
-@media screen and (min-width: 0) and (max-width: 1024px) and (min-height: 0) and (max-height: 800px) {
+@media screen and (min-width: 0) and (max-width: 1024px) and (min-height: 0) and (max-height: 700px) {
   .top-ceremony__info-time {
     font-size: 12px;
   }
@@ -885,7 +885,7 @@ html {
     font-size: 22px;
   }
 }
-@media screen and (min-width: 0) and (max-width: 1024px) and (min-height: 0) and (max-height: 800px) {
+@media screen and (min-width: 0) and (max-width: 1024px) and (min-height: 0) and (max-height: 700px) {
   .top-ceremony__info-loc {
     font-size: 18px;
   }
@@ -911,7 +911,7 @@ html {
     font-size: 12px;
   }
 }
-@media screen and (min-width: 0) and (max-width: 1024px) and (min-height: 0) and (max-height: 800px) {
+@media screen and (min-width: 0) and (max-width: 1024px) and (min-height: 0) and (max-height: 700px) {
   .top-ceremony__info-subloc {
     font-size: 10px;
   }
@@ -1119,7 +1119,7 @@ html {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    padding: 65px 24px 30px;
+    padding: 95px 24px 30px;
   }
 }
 .top-reception__ct-ctr {
@@ -1200,7 +1200,7 @@ html {
     margin: 0 auto;
   }
 }
-@media screen and (min-width: 0) and (max-width: 1024px) and (min-height: 0) and (max-height: 800px) {
+@media screen and (min-width: 0) and (max-width: 1024px) and (min-height: 0) and (max-height: 700px) {
   .top-reception__info-time {
     font-size: 12px;
   }
@@ -1238,7 +1238,7 @@ html {
     font-size: 22px;
   }
 }
-@media screen and (min-width: 0) and (max-width: 1024px) and (min-height: 0) and (max-height: 800px) {
+@media screen and (min-width: 0) and (max-width: 1024px) and (min-height: 0) and (max-height: 700px) {
   .top-reception__info-loc {
     font-size: 18px;
   }
@@ -1264,7 +1264,7 @@ html {
     font-size: 12px;
   }
 }
-@media screen and (min-width: 0) and (max-width: 1024px) and (min-height: 0) and (max-height: 800px) {
+@media screen and (min-width: 0) and (max-width: 1024px) and (min-height: 0) and (max-height: 700px) {
   .top-reception__info-subloc {
     font-size: 10px;
   }
@@ -1293,8 +1293,13 @@ html {
 }
 @media screen and (max-width: 1024px) {
   .top-reception__img {
+    height: 238px;
+    margin: -28px auto 0;
+  }
+}
+@media screen and (min-width: 0) and (max-width: 1024px) and (min-height: 0) and (max-height: 700px) {
+  .top-reception__img {
     height: 198px;
-    margin-top: -28px;
   }
 }
 @media screen and (max-width: 1366px) {
@@ -1366,6 +1371,7 @@ html {
   .top-reception__chat-bubble {
     -webkit-transform-origin: bottom right !important;
             transform-origin: bottom right !important;
+    margin-top: -55px;
   }
 }
 .top-reception__chat-bubble-text {
@@ -1469,7 +1475,7 @@ html {
     max-width: 131px;
   }
 }
-@media screen and (min-width: 0) and (max-width: 1024px) and (min-height: 0) and (max-height: 800px) {
+@media screen and (min-width: 0) and (max-width: 1024px) and (min-height: 0) and (max-height: 700px) {
   .top-tips__head-waze-img {
     max-width: 100px;
   }
