@@ -225,7 +225,7 @@ html {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-top: 120px;
+  padding-top: 150px;
 }
 @media screen and (max-width: 1024px) {
   .footer__main {
@@ -242,7 +242,7 @@ html {
   display: flex;
   gap: 30px;
   position: absolute;
-  top: 70px;
+  top: 100px;
   left: 0;
 }
 @media screen and (max-width: 1024px) {
@@ -306,6 +306,7 @@ html {
 }
 .footer__deco-ger {
   width: 483px;
+  height: 58vh;
   position: absolute;
   bottom: 0;
   left: 87px;
@@ -319,12 +320,14 @@ html {
   .footer__deco-ger {
     position: unset;
     width: 253px;
+    height: auto;
     padding-left: 40px;
     margin: 0 auto;
   }
 }
 .footer__deco-jill {
   width: 613px;
+  height: 30.74vh;
   position: absolute;
   right: 55px;
   bottom: 20px;
@@ -334,9 +337,15 @@ html {
     width: calc(413px + (613 - 413) * (100vw - 1025px) / (1920 - 1025));
   }
 }
+@media screen and (min-width: 1025px) and (max-width: 1920px) and (min-height: 600px) and (max-height: 1079px) {
+  .footer__deco-jill {
+    width: calc(313px + (613 - 313) * (100vh - 600px) / (1079 - 600));
+  }
+}
 @media screen and (max-width: 1024px) {
   .footer__deco-jill {
     width: 290px;
+    height: auto;
     right: 50%;
     bottom: 19px;
     -webkit-transform: translateX(50%);
@@ -2549,3 +2558,4 @@ html {
   -webkit-transform-origin: bottom right;
           transform-origin: bottom right;
 }
+/*# sourceMappingURL=main.css.map */
