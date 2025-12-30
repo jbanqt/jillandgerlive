@@ -498,7 +498,7 @@ html {
         -ms-flex-direction: column;
             flex-direction: column;
     margin: 0;
-    padding-top: 10vh;
+    padding-top: 15vh;
   }
 }
 .top-hero__content {
@@ -513,7 +513,7 @@ html {
     height: -moz-fit-content;
     height: fit-content;
     max-height: 80vh;
-    margin: -2% 0 0;
+    margin: -5% 0 0;
     position: relative;
     left: 50%;
     -webkit-transform: translateX(-47%);
@@ -578,7 +578,7 @@ html {
 }
 @media screen and (max-width: 1024px) {
   .top-ceremony__head {
-    bottom: 100%;
+    bottom: calc(100% - 25px);
     left: 50%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
@@ -1096,7 +1096,7 @@ html {
 @media screen and (max-width: 1024px) {
   .top-reception__head {
     right: unset;
-    bottom: 100%;
+    bottom: calc(100% - 25px);
     left: 50%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
@@ -1411,7 +1411,7 @@ html {
   .top-tips__head {
     position: absolute;
     right: unset;
-    bottom: 100%;
+    bottom: calc(100% - 15px);
     left: 50%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
@@ -1661,7 +1661,7 @@ html {
 @media screen and (max-width: 1024px) {
   .top-dcode__head {
     top: unset;
-    bottom: 100%;
+    bottom: calc(100% - 25px);
     left: 50%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
@@ -1976,7 +1976,7 @@ html {
 .top-gifts__head {
   position: absolute;
   left: 50%;
-  bottom: 100%;
+  bottom: calc(100% - 25px);
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
 }
