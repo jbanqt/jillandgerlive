@@ -46,8 +46,7 @@
               <div class="top-hero__head">
                 <h1 class="top-hero__heading">Jill & Ger</h1>
               </div>
-              <div class="top-hero__content">
-                <img class="image image--contain image--100" src="./public/videos/hero-vid.gif" alt="Jill and Ger"></div>
+              <div class="top-hero__content"><img class="image image--contain image--100" src="./public/videos/hero-vid.gif" alt="Jill and Ger"></div>
             </div>
           </div>
         </div>
@@ -126,14 +125,7 @@
                 </div>
               </div>
             </div>
-            <div class="top-ceremony__map">
-              <picture>
-                <source data-srcset="./public/images/top/ceremony-map-sp.webp" media="(max-width: 1024px)" type="image/webp"/>
-                <source data-srcset="./public/images/top/ceremony-map-sp.png" media="(max-width: 1024px)" type="image/png"/>
-                <source data-srcset="./public/images/top/ceremony-map.webp" type="image/webp"/>
-                <source data-srcset="./public/images/top/ceremony-map.png" type="image/png"/><img class="lazy image image--100 image--contain block" data-src="./public/images/top/ceremony-map.png" alt="Map"/>
-              </picture>
-            </div>
+            <div class="top-ceremony__map"><img class="image image--100 image--contain image--bottom-right big-sp-up" src="./public/images/top/ceremony-map.png" alt="Map"><img class="image image--100 image--contain image--bottom-right big-sp-down" src="./public/images/top/ceremony-map-sp.png" alt="Map"></div>
           </div>
         </div>
       </section>
@@ -438,5 +430,16 @@
     <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.3/dist/lazyload.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/fullpage.js/dist/fullpage.min.js" defer></script>
     <script src="./js/top/index.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', function () {
+        var lazyLoadInstance = new LazyLoad({
+          elements_selector: ".lazy"
+        });
+      
+        window.addEventListener('load', () => {
+          lazyLoadInstance.update();
+        });
+      });
+    </script>
   </body>
 </html>
