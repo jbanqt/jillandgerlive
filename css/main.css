@@ -23,7 +23,8 @@ div {
 
 @font-face {
   font-family: "PP Editorial Old";
-  src: local("PP Editorial Old"), url("/public/fonts/PPEditorialOld-Ultralight.woff2") format("woff2");
+  src: local("PP Editorial Old"), url("/public/fonts/PPEditorialOld-Ultralight.woff") format("woff");
+  font-weight: 300;
 }
 @font-face {
   font-family: "Vividly Regular";
@@ -412,7 +413,7 @@ html {
 .title {
   font-size: 13rem;
   font-family: "PP Editorial Old";
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: -0.03em;
   color: #3c0f30;
   padding-top: 10px;
@@ -1549,7 +1550,7 @@ html {
 @media screen and (max-width: 1024px) {
   .top-tips__ct-list {
     height: auto;
-    gap: 24px;
+    gap: 18px;
   }
 }
 .top-tips__ct-item {
